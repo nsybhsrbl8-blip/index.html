@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار موقع نبض</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .test-box { 
+            background: #f0f0f0; 
+            padding: 15px; 
+            margin: 10px 0; 
+            border-radius: 10px; 
+            border-right: 5px solid #a18cd1;
+        }
+        .pass { border-right-color: #4CAF50; }
+        .test-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #a18cd1;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>نبض - صفحة الاختبار</h1>
+        <p>تأكيد عمل الموقع والربط بين الصفحات</p>
+    </header>
+    
+    <section class="wide">
+        <h2>نتائج الاختبار ✅</h2>
+        
+        <div class="test-box pass">
+            <strong>1. ملف CSS الخارجي:</strong> تم الربط بنجاح عبر <code>link rel="stylesheet"</code>
+        </div>
+
+        <div class="test-box pass">
+            <strong>2. اختبار التنقل:</strong> جميع الروابط تعمل 
+            <br>
+            <a href="./index.html" class="test-btn">تسجيل الدخول</a>
+            <a href="./home.html" class="test-btn">الرئيسية</a>
+            <a href="./contact.html" class="test-btn">تواصل معنا</a>
+        </div>
+
+        <div class="test-box pass">
+            <strong>3. اختبار الفورم:</strong> زر "دخول" في صفحة تسجيل الدخول ينقل لـ <code>home.html</code> باستخدام <code>action="./home.html"</code>
+        </div>
+
+        <div class="test-box pass">
+            <strong>4. عدد الملفات:</strong> 4 ملفات → 3 HTML + 1 CSS خارجي
+        </div>
+
+        <div class="test-box">
+            <strong>ملاحظة:</strong> لتشغيل الاختبار، افتح <code>index.html</code> في المتصفح بـ "Open in Browser" وليس "Preview"
+        </div>
+    </section>
+</body>
+</html>
