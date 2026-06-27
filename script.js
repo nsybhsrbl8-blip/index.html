@@ -1,5 +1,4 @@
-// دالة طلب الخدمة
-function orderService(serviceName) {
+orderService(serviceName) {
     alert(`شكراً لاهتمامك بخدمة "${serviceName}" 💜\nسيتم تحويلك لصفحة تواصل معنا لإكمال الطلب`);
     window.location.href = `contact.html?service=${serviceName}`;
 }
