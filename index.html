@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نبض</title>
+    <style>
+        body { 
+            font-family: Tahoma, Arial; 
+            background: linear-gradient(135deg, #f093fb, #f5576c); 
+            margin: 0; 
+            padding: 20px; 
+            text-align: center; 
+        }
+       .box { 
+            background: white; 
+            padding: 20px; 
+            margin: 15px auto; 
+            max-width: 700px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        nav a { 
+            margin: 0 10px; 
+            color: #f5576c; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+        input, button { 
+            display: block; 
+            width: 90%; 
+            margin: 10px auto; 
+            padding: 12px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            font-size: 16px;
+        }
+        button { 
+            background: #f5576c; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            font-weight: bold;
+        }
+        button:hover { background: #e04a5f; }
+       .card { 
+            border: 1px solid #eee; 
+            padding: 15px; 
+            margin: 10px; 
+            border-radius: 10px; 
+            display: inline-block; 
+            width: 200px; 
+            background: #fafafa; 
+            vertical-align: top;
+        }
+        #list { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>نبض</h1>
+        <p>منصة تواصلك الذكية</p>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="#services">خدماتنا</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </div>
+
+    <div class="box">
+        <h2>تسجيل الدخول</h2>
+        <input type="text" placeholder="اسم المستخدم">
+        <input type="password" placeholder="كلمة المرور">
+        <button>دخول</button>
+    </div>
+
+    <div class="box" id="services">
+        <h2>خدماتنا</h2>
+        <div id="list">جاري تحميل الخدمات...</div>
+    </div>
+
+<script>
+// الكود دا حيرسم الكروت تلقائياً أول ما الصفحة تفتح
+window.onload = function() {
+    const services = [
+        {t: "علاج طبيعي", d: "جلسات علاج طبيعي منزلية", p: "200 جنيه/جلسة", i: "🏥"},
+        {t: "رعاية مسنين", d: "رعاية شاملة لكبار السن", p: "3000 جنيه/شهر", i: "👴"},
+        {t: "تمريض منزلي", d: "خدمات تمريض محترفة", p: "150 جنيه/زيارة", i: "💉"},
+        {t: "دعم نفسي", d: "استشارة نفسية بسرية", p: "250 جنيه/جلسة", i: "🧠"},
+        {t: "توصيل أدوية", d: "توصيل أدويتك لباب بيتك", p: "20 جنيه", i: "💊"},
+        {t: "استشارات طبية", d: "استشر طبيب فيديو كول", p: "100 جنيه/استشارة", i: "👨‍⚕️"}
+    ];
+    
+    let html = '';
+    for(let i = 0; i < services.length; i++) {
+        let s = services[i];
+        html += '<div class="card">' +
+                '<div style="font-size:35px">' + s.i + '</div>' +
+                '<h3>' + s.t + '</h3>' +
+                '<p>' + s.d + '</p>' +
+                '<strong>' + s.p + '</strong><br><br>' +
+                '<button onclick="alert(\'تم اختيار: ' + s.t + '\')">احجز الآن</button>' +
+                '</div>';
+    }
+    
+    document.getElementById('list').innerHTML = html;
+};
+</script>
+</body>
+</html>
